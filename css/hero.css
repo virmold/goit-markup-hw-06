@@ -1,7 +1,6 @@
-
 .hero {
     background-color: #2E2F42;
-    padding: 112px 0;
+    padding: 72px 0;
 
     background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url('../images/hero-bg-mob.jpg');
     background-repeat: no-repeat;
@@ -29,15 +28,15 @@ screen and (min-resolution: 2dppx) {
     color: #FFFFFF;
     letter-spacing: 0.02em;
     max-width: 216px;
-    
+
     margin: 0 auto 72px auto;
-  
+
 }
 
 .hero-btn {
     display: block;
     margin: 0 auto;
-   
+
     min-width: 169px;
     cursor: pointer;
     background-color: #4D5AE5;
@@ -61,12 +60,13 @@ screen and (min-resolution: 2dppx) {
 
 @media screen and (min-width: 768px) {
     .hero {
+        padding: 112px 0;
         max-width: 768px;
-  
+
         background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url('../images/hero-bg-tab.jpg');
     }
 
-  
+
     @media screen and (min-resolution: 192dpi),
     screen and (min-resolution: 2dppx) {
         .hero {
@@ -76,7 +76,7 @@ screen and (min-resolution: 2dppx) {
 
     .hero-text {
         font-size: 56px;
-       
+
         line-height: 1.07;
         max-width: 496px;
         margin-bottom: 36px;
