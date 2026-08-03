@@ -1,4 +1,4 @@
-body{
+body {
     font-family: "Roboto", sans-serif;
     color: #434455;
     background-color: #fff;
@@ -7,15 +7,20 @@ body{
     line-height: 1.5;
     letter-spacing: 0.02em;
 }
-ul{
+
+ul {
     list-style-type: none;
     margin: 0;
     padding-left: 0;
-
 }
-h1, h2, h3, p{
+
+h1,
+h2,
+h3,
+p {
     margin: 0;
 }
+
 .sr-only {
     position: absolute;
     white-space: nowrap;
@@ -28,10 +33,26 @@ h1, h2, h3, p{
     clip-path: inset(100%);
     margin: -1px;
 }
-.container{
-    max-width: 1158px;
-    margin: 0 auto;
-    padding-left: 15px;
-    padding-right: 15px;
 
+
+.container {
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+@media screen and (min-width: 768px) {
+    .container {
+        max-width: 768px;
+    }
+}
+
+@media screen and (min-width: 1158px) {
+    .container {
+        max-width: 1158px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
 }

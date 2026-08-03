@@ -1,32 +1,39 @@
+
 .footer {
     background-color: #2E2F42;
-    padding-top: 100px;
-    padding-bottom: 100px;
+    padding-top: 96px;
+    padding-bottom: 96px;
 }
 
 .footer-container {
     padding-right: 15px;
     padding-left: 15px;
+    margin: 0 auto;
+
     display: flex;
-    flex-direction: row;
-    align-items: flex-start;
+    flex-direction: column;
+    align-items: center;
+    gap: 72px;
 }
 
 .footer-info-block {
-    margin-right: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .logo-d {
     display: inline-block;
     font-weight: 700;
     font-size: 18px;
-    line-height: 1.3;
+    line-height: 1.17;
     text-transform: uppercase;
     letter-spacing: 0.03em;
     font-family: "Raleway", sans-serif;
     color: #F4F4FD;
     text-decoration: none;
     margin-bottom: 16px;
+    text-align: center;
 }
 
 .web-logo {
@@ -37,11 +44,15 @@
     color: #F4F4FD;
     max-width: 264px;
     line-height: 1.5;
+    letter-spacing: 0.02em;
+    text-align: left;
+
 }
 
 .footer-social-block {
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 .social-title {
@@ -51,6 +62,7 @@
     letter-spacing: 0.02em;
     color: #FFFFFF;
     margin-bottom: 16px;
+    text-align: center;
 }
 
 .footer-social-list {
@@ -82,20 +94,12 @@
     background-color: #31D0AA;
 }
 
-.footer-container {
-    display: flex;
-    align-items: baseline;
-    /* Або flex-start, залежно від макету */
-}
 
-.footer-info-block {
-    margin-right: 120px;
-}
-
-/* Форма підписки */
 .footer-subscribe-block {
-    margin-left: auto;
-    /* Відштовхує блок підписки вправо */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
 }
 
 .subscribe-title {
@@ -105,15 +109,23 @@
     letter-spacing: 0.02em;
     color: #FFFFFF;
     margin-bottom: 16px;
+    text-align: center;
 }
 
 .subscribe-form {
     display: flex;
-    gap: 24px;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    width: 100%;
+}
+
+.subscribe-label {
+    width: 100%;
 }
 
 .subscribe-input {
-    width: 264px;
+    width: 100%;
     height: 40px;
     background-color: transparent;
     border: 1px solid #ffffff;
@@ -121,7 +133,6 @@
     padding-left: 16px;
     font-size: 12px;
     line-height: 2;
-    font-size: 12px;
     letter-spacing: 0.04em;
     color: #ffffff;
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -133,7 +144,7 @@
 }
 
 .subscribe-input:focus {
-    border-color: #31D0AA;;
+    border-color: #31D0AA;
     outline: none;
 }
 
@@ -155,6 +166,7 @@
     border-radius: 4px;
     cursor: pointer;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    margin: 0 auto;
 }
 
 .subscribe-btn:hover,
@@ -165,4 +177,71 @@
 .subscribe-icon {
     fill: #ffffff;
     margin-left: 16px;
+}
+
+
+@media screen and (min-width: 768px) {
+    .footer-container {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: baseline;
+        justify-content: flex-start;
+        gap: 72px 24px;
+        width: 584px;
+        padding: 0;
+    }
+
+    .footer-info-block,
+    .footer-social-block,
+    .footer-subscribe-block {
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .logo-d,
+    .social-title,
+    .subscribe-title {
+        text-align: left;
+    }
+
+    .subscribe-form {
+        flex-direction: row;
+        gap: 24px;
+        align-items: center;
+        width: auto;
+    }
+
+    .subscribe-label {
+        width: auto;
+    }
+
+    .subscribe-input {
+        width: 264px;
+
+    }
+}
+
+
+@media screen and (min-width: 1158px) {
+    .footer {
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+
+    .footer-container {
+        flex-wrap: nowrap;
+        gap: 0;
+        width: 1158px;
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+
+    .footer-info-block {
+        margin-right: 120px;
+
+    }
+
+    .footer-subscribe-block {
+        margin-left: auto;
+    }
 }

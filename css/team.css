@@ -1,21 +1,25 @@
+
 .team {
     background-color: #F4F4FD;
-    padding-top: 120px;
-    padding-bottom: 120px;
+    padding-top: 96px;
+    padding-bottom: 96px;
 }
 
 .team-name {
     font-weight: 700;
     font-size: 36px;
-    line-height: 1.1;
+    line-height: 1.11;
     text-align: center;
     color: #2E2F42;
     margin-bottom: 72px;
+    letter-spacing: 0.02em;
 }
 
 .team-list {
     display: flex;
-    gap: 24px;
+    flex-direction: column;
+    align-items: center;
+    gap: 72px;
     list-style: none;
     padding: 0;
     margin: 0;
@@ -23,12 +27,12 @@
 
 .person {
     background-color: #FFFFFF;
-    flex-basis: calc((100% - 72px) / 4);
+    width: 264px;
     border-radius: 0 0 4px 4px;
     box-shadow:
-            0 2px 1px 0 rgba(46, 47, 66, 0.08),
-            0 1px 1px 0 rgba(46, 47, 66, 0.16),
-            0 1px 6px 0 rgba(46, 47, 66, 0.08);
+        0 2px 1px 0 rgba(46, 47, 66, 0.08),
+        0 1px 1px 0 rgba(46, 47, 66, 0.16),
+        0 1px 6px 0 rgba(46, 47, 66, 0.08);
 }
 
 .person img {
@@ -48,12 +52,16 @@
     color: #2E2F42;
     line-height: 1.2;
     margin-bottom: 8px;
+    letter-spacing: 0.02em;
 }
 
 .person-job {
     text-align: center;
     color: #434455;
     margin-bottom: 8px;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
 }
 
 .social-list {
@@ -86,7 +94,37 @@
     background-color: #404BBF;
 }
 
-.container {
-    padding-right: 15px;
-    padding-left: 15px;
+
+
+@media screen and (min-width: 768px) {
+    .team-list {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        column-gap: 24px;
+        row-gap: 64px;
+    }
+
+    .person {
+        width: calc((100% - 24px) / 2);
+        max-width: 264px;
+    }
+}
+
+
+@media screen and (min-width: 1158px) {
+    .team {
+        padding-top: 120px;
+        padding-bottom: 120px;
+    }
+
+    .team-list {
+        flex-wrap: nowrap;
+        gap: 24px;
+    }
+
+    .person {
+        width: calc((100% - 72px) / 4);
+        max-width: none;
+    }
 }
